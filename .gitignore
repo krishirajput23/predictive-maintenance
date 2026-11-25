@@ -1,8 +1,0 @@
-__pycache__/
-*.py[cod]
-.venv/
-.ipynb_checkpoints/
-
-# Original supplied archive; the working copy lives in data/
-archive/
-archive.zip
