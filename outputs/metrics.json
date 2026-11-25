@@ -1,0 +1,140 @@
+{
+  "generated_at": "2026-11-25T18:13:21+00:00",
+  "random_state": 42,
+  "gpu_requested": true,
+  "features": [
+    "metric1",
+    "metric2",
+    "metric3",
+    "metric4",
+    "metric5",
+    "metric6",
+    "metric7",
+    "metric9",
+    "day_index",
+    "month",
+    "day_of_week",
+    "device_age_days",
+    "metric1_z",
+    "metric2_z",
+    "metric3_z",
+    "metric4_z",
+    "metric5_z",
+    "metric6_z",
+    "metric7_z",
+    "metric9_z"
+  ],
+  "split": {
+    "train": {
+      "rows": 85041,
+      "devices": 818,
+      "failures": 74,
+      "failure_rate": 0.0008701685069554685
+    },
+    "val": {
+      "rows": 21116,
+      "devices": 175,
+      "failures": 16,
+      "failure_rate": 0.0007577192650123129
+    },
+    "test": {
+      "rows": 18336,
+      "devices": 176,
+      "failures": 16,
+      "failure_rate": 0.0008726003490401396
+    }
+  },
+  "baseline_pr_auc": 0.0008726003490401396,
+  "selected_model": "xgboost",
+  "selected_params": {
+    "learning_rate": 0.03,
+    "max_depth": 3,
+    "min_child_weight": 1,
+    "scale_pos_weight": 5
+  },
+  "threshold": 0.17895150184631348,
+  "validation_f1_at_threshold": 0.2162162162162162,
+  "test_ranking": {
+    "pr_auc": 0.13429242688708232,
+    "roc_auc": 0.9273881004366812
+  },
+  "test_at_threshold": {
+    "threshold": 0.17895150184631348,
+    "precision": 0.2,
+    "recall": 0.3125,
+    "f1": 0.24390243902439027,
+    "tp": 5,
+    "fp": 20,
+    "fn": 11,
+    "tn": 18300
+  },
+  "model_comparison": [
+    {
+      "model": "logistic_regression",
+      "val_pr_auc": 0.0392012389,
+      "val_roc_auc": 0.86367891,
+      "test_pr_auc": 0.0770806027,
+      "test_roc_auc": 0.8124863537,
+      "fit_seconds": 0.362576,
+      "best_params": "{}"
+    },
+    {
+      "model": "decision_tree",
+      "val_pr_auc": 0.0399290252,
+      "val_roc_auc": 0.7013166469,
+      "test_pr_auc": 0.0240577133,
+      "test_roc_auc": 0.6518746588,
+      "fit_seconds": 0.4689454,
+      "best_params": "{}"
+    },
+    {
+      "model": "random_forest",
+      "val_pr_auc": 0.0546633968,
+      "val_roc_auc": 0.9261344787,
+      "test_pr_auc": 0.1579824864,
+      "test_roc_auc": 0.8335306359,
+      "fit_seconds": 26.3990263,
+      "best_params": "{\"max_depth\": null, \"max_features\": \"sqrt\", \"min_samples_leaf\": 8}"
+    },
+    {
+      "model": "gradient_boosting",
+      "val_pr_auc": 0.0245606817,
+      "val_roc_auc": 0.8592150474,
+      "test_pr_auc": 0.113012841,
+      "test_roc_auc": 0.804854667,
+      "fit_seconds": 269.8205042,
+      "best_params": "{\"learning_rate\": 0.03, \"max_depth\": 2, \"n_estimators\": 150}"
+    },
+    {
+      "model": "xgboost",
+      "val_pr_auc": 0.1344657194,
+      "val_roc_auc": 0.9078347156,
+      "test_pr_auc": 0.1342924269,
+      "test_roc_auc": 0.9273881004,
+      "fit_seconds": 10.4414217,
+      "best_params": "{\"learning_rate\": 0.03, \"max_depth\": 3, \"min_child_weight\": 1, \"scale_pos_weight\": 5}"
+    }
+  ],
+  "feature_importance": {
+    "metric7": 0.06960197731501569,
+    "day_of_week": 0.044673913880972055,
+    "metric2": 0.03579331605321052,
+    "metric2_z": 0.021884822342433243,
+    "metric1": 0.01952832351484555,
+    "day_index": 0.01801358216073842,
+    "metric4": 0.016897444460068477,
+    "metric1_z": 0.0099274159835824,
+    "metric5": 0.002734141788701111,
+    "metric9": 0.0004032852584727187,
+    "month": 0.0003909875041069988,
+    "metric9_z": 4.277160903348731e-05,
+    "metric3_z": 0.0,
+    "metric3": -0.0004165882607714222,
+    "metric6_z": -0.004745092177187357,
+    "metric5_z": -0.004767187679661289,
+    "metric6": -0.005257690950715757,
+    "device_age_days": -0.007520789732976524,
+    "metric7_z": -0.011646638588023811,
+    "metric4_z": -0.0755470355592028
+  }
+}
